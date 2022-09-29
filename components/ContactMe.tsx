@@ -20,15 +20,15 @@ function ContactMe({}: Props) {
   const onSubmit: SubmitHandler<Inputs> = formData => console.log(formData);
 
   return (
-    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
+    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 pt-10 justify-evenly mx-auto items-center">
         <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
             Contact
         </h3>
 
-        <div className="flex flex-col space-y-10">
-            <h4 className="text-4xl font-semibold text-center">
-                I have got just what you need.{" "}
-                <span className="decoration-[#F7AB0A]/50 underline"> Text me! </span>
+        <div className="flex flex-col space-y-8">
+            <h4 className="text-2xl font-semibold text-center">
+                if you need, {" "}
+                <span className="decoration-[#F7AB0A]/50 underline"> hit me up! </span>
             </h4>
 
             <div className="space-y-10">
@@ -49,20 +49,20 @@ function ContactMe({}: Props) {
             </div>
 
             <form 
-                className="flex flex-col space-y-2 w-fit mx-auto" 
+                className="flex flex-col space-y-2 mx-auto w-[350px] md:w-[454px]" 
                 onSubmit={handleSubmit(onSubmit)}
             >
 
                 <div className="flex space-x-2">
-                    <input {...register('name')} type="text" placeholder="Name" className="contactInput" />
-                    <input {...register('email')} type="email" placeholder="Email" className="contactInput" />
+                    <input {...register('name')} type="text" placeholder="Name" className="contactInput w-[50%]" />
+                    <input {...register('email')} type="email" placeholder="Email" className="contactInput w-[50%]" />
                 </div>
 
                 <input {...register('subject')} type="text" placeholder="Subject" className="contactInput" />
 
                 <textarea {...register('message')} placeholder="Message" className="contactInput" />
 
-                <button className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg">Submit</button>
+                <button className="bg-[#F7AB0A] py-5 px-1 rounded-md text-black font-bold text-lg">Submit</button>
             </form>
 
         </div>

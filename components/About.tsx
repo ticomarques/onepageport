@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { motion } from 'framer-motion';
+import { PageInfo } from '../typings';
+import { urlFor } from '../sanity';
 
 
 
-type Props = {}
+type Props = {
+    pageInfo: PageInfo;
+}
 
-type State = {}
+const About = ({pageInfo}:Props) => {
 
-class About extends Component<Props, State> {
-  state = {}
-
-  render() {
-    return (
+  return(
       <motion.div
         
         initial={{
@@ -24,7 +24,7 @@ class About extends Component<Props, State> {
             duration: 1.5
         }}
 
-        className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
+        className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-center mx-auto items-center">
         <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">About</h3>
 
         <motion.img 
@@ -46,18 +46,17 @@ class About extends Component<Props, State> {
                 duration: 1.2,
             }}
 
-            src="https://cdn.sanity.io/images/ltuexkre/production/ac8058b25cc880765f6549dd27223349f37a7c2f-1173x1458.jpg"
-            className="mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
+            src={urlFor(pageInfo?.profilePic).url()}
+            className="mb-5 mt-5 flex-shrink-0 w-24 h-24 rounded-full object-cover md:rounded-lg md:w-64 md:h-64 xl:w-[500px] xl:h-[600px] "
         />
 
-        <div className="space-y-10 px-0 md:px-10">
-            <h4 className="text-4xl font-semibold">Here is a <span className="underline decoration-[#F7AB0A]/50">little</span> background</h4>
-            <p className="text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse error molestias animi, velit possimus natus ut blanditiis ipsum nihil eaque quidem voluptates laboriosam porro voluptate, facere expedita dolorem fugiat sequi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse error molestias animi, velit possimus natus ut blanditiis ipsum nihil eaque quidem voluptates laboriosam porro voluptate, facere expedita dolorem fugiat sequi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse error molestias animi, velit possimus natus ut blanditiis ipsum nihil eaque quidem voluptates laboriosam porro voluptate, facere expedita dolorem fugiat sequi!</p>
+        <div className="space-y-5 px-0 md:px-10">
+            <h4 className="text-4xl font-semibold"> Just <span className="underline decoration-[#F7AB0A]/50">little</span> of me</h4>
+            <p className="text-sm mt-0">{pageInfo?.backgroundInformation}</p>
         </div>
 
       </motion.div>
     )
-  }
 }
 
 export default About

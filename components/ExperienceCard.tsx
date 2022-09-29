@@ -1,12 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import { motion } from 'framer-motion';
+import { Experience } from '../typings';
+import { urlFor } from '../sanity';
 
-type Props = {}
+type Props = {
+    experience: Experience;
+}
 
-function ExperienceCard({}: Props) {
+function ExperienceCard({experience}: Props) {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-500 overflow-hidden">
+    <article className="flex flex-col rounded-lg items-center space-y-7 p-4 flex-shrink-0 w-[290px] md:w-[380px] xl:w-[500px] snap-center bg-[#292929] hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-500 overflow-hidden">
         <motion.img 
         initial={{
             y: -100,
@@ -22,40 +26,42 @@ function ExperienceCard({}: Props) {
         viewport={{
             once: true,
         }}
-        src="https://cdn.sanity.io/images/ltuexkre/production/050ee674d199aa8d254af2b5ea480d3dc320cbb1-1240x1440.png" 
-        alt="Company" 
+        src={urlFor(experience?.companyImage).url()} 
+        alt={`Company that I have worked: ${experience.company}`} 
         className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
         />
-        <div className="px-0 md:px-10">
-            <h4 className="text-4xl font-light">CEO of COMPANY</h4>
-            <p className="font-bold text-2xl mt-1">FAMFAMFAM</p>
+        <div className=" md:px-10">
+            <h4 className="text-3xl font-light text-center">{experience.company}</h4>
+            <p className="font-bold text-xl mt-1 text-center">{experience.jobTitle}</p>
             <div className="flex space-x-2 my-2">
-                {/** tech used */}
-                <img 
-                    src="https://cdn.sanity.io/images/ltuexkre/production/2a67945990f9c2ef568cf7e8483c1a8174556463-500x500.png"
-                    alt=""
-                    className="w-10 h-10 rounded-full"
-                /> 
-                <img 
-                    src="https://cdn.sanity.io/images/ltuexkre/production/2a67945990f9c2ef568cf7e8483c1a8174556463-500x500.png"
-                    alt=""
-                    className="w-10 h-10 rounded-full"
-                /> 
-                <img 
-                    src="https://cdn.sanity.io/images/ltuexkre/production/2a67945990f9c2ef568cf7e8483c1a8174556463-500x500.png"
-                    alt=""
-                    className="w-10 h-10 rounded-full"
-                />    
+                {
+                    experience.technologies.map(technology => (
+                        <img
+                            key={technology._id}
+                            className="h-10 w-10 rounded-full"
+                            src={urlFor(technology.image).url()}
+                            alt={technology.title}
+                        />
+                    ))
+                }
+                    
                 
             </div>
-            <p className="uppercase py-5 text-gray-300">Started.... - Ended...</p>
+            <p className="uppercase text-sm font-semibold text-center py-5 text-gray-300">
+                { new Date(experience.dateStarted).toDateString() } - 
+                { experience.isCurrentlyWorkingHere ? 
+                    "Present" : 
+                    new Date(experience.dateEnded).toDateString()
 
-            <ul className="list-disc space-y-4 ml-5 text-lg">
-                <li>Summary points</li>
-                <li>Summary points</li>
-                <li>Summary points</li>
-                <li>Summary points</li>
-                <li>Summary points</li>
+                }
+            </p>
+
+            <ul className="list-disc space-y-2 ml-5 text-sm max-h-96 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#F7AB0A]/80">
+                {
+                    experience.points.map((point, i) => (
+                        <li key={i}>{point}</li>
+                    ))
+                }
             </ul>
 
         </div>
