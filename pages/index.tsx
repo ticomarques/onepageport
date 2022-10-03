@@ -24,6 +24,10 @@ type Props = {
   socials: Social[];
 }
 
+const scrollTop = () => {
+  window.scrollTo(0, 0);
+}
+
 
 const Home = ({ pageInfo, experiences, projects, skills, socials } : Props) => {
   return (
@@ -59,10 +63,12 @@ const Home = ({ pageInfo, experiences, projects, skills, socials } : Props) => {
         <ContactMe />
       </section>
 
-      <Link href="/">
+      <Link href="#top">
       <footer className="sticky bottom-5 w-full cursor-pointer">
-        <div className="flex items-center justify-center">
-          <img src="https://i.imgur.com/e2yvD6A.png" alt="Woohooo" className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"/>
+        <div className="flex items-center justify-center ">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" w-6 h-6 p-1 rounded-full mx-auto filter grayscale hover:grayscale-0 cursor-pointer  bg-[#F7AB0A]/50">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75" />
+          </svg>
         </div>
       </footer>
       </Link>

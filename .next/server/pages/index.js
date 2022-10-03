@@ -332,10 +332,10 @@ function ExperienceCard({ experience  }) {
                 },
                 src: (0,_sanity__WEBPACK_IMPORTED_MODULE_3__/* .urlFor */ .uH)(experience === null || experience === void 0 ? void 0 : experience.companyImage).url(),
                 alt: `Company that I have worked: ${experience.company}`,
-                className: "w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
+                className: "w-28 h-28 rounded-full md:w-20 md:h-20 xl:w-[200px] xl:h-[200px] object-cover object-center"
             }),
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                className: " md:px-10",
+                className: "md:px-10",
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h4", {
                         className: "text-3xl font-light text-center",
@@ -346,15 +346,15 @@ function ExperienceCard({ experience  }) {
                         children: experience.jobTitle
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                        className: "flex space-x-2 my-2",
+                        className: "flex space-x-2 my-2 md:items-center md:justify-center",
                         children: experience.technologies.map((technology)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
-                                className: "h-10 w-10 rounded-full",
+                                className: "h-5 w-5 md:h-10 md:w-10 rounded-full",
                                 src: (0,_sanity__WEBPACK_IMPORTED_MODULE_3__/* .urlFor */ .uH)(technology.image).url(),
                                 alt: technology.title
                             }, technology._id))
                     }),
                     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
-                        className: "uppercase text-sm font-semibold text-center py-5 text-gray-300",
+                        className: "uppercase text-sm font-semibold text-center py-2 text-gray-300",
                         children: [
                             new Date(experience.dateStarted).toDateString(),
                             " -",
@@ -404,6 +404,7 @@ framer_motion__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_dependencies__.the
 
 function Header({ socials  }) {
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("header", {
+        id: "top",
         className: "sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center",
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_3__.motion.div, {
@@ -911,6 +912,9 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_com
 
 
 
+const scrollTop = ()=>{
+    window.scrollTo(0, 0);
+};
 const Home = ({ pageInfo , experiences , projects , skills , socials  })=>{
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
         className: "bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80",
@@ -970,15 +974,23 @@ const Home = ({ pageInfo , experiences , projects , skills , socials  })=>{
                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_ContactMe__WEBPACK_IMPORTED_MODULE_8__/* ["default"] */ .Z, {})
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_9___default()), {
-                href: "/",
+                href: "#top",
                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("footer", {
                     className: "sticky bottom-5 w-full cursor-pointer",
                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                        className: "flex items-center justify-center",
-                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
-                            src: "https://i.imgur.com/e2yvD6A.png",
-                            alt: "Woohooo",
-                            className: "h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
+                        className: "flex items-center justify-center ",
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("svg", {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            fill: "none",
+                            viewBox: "0 0 24 24",
+                            strokeWidth: 1.5,
+                            stroke: "currentColor",
+                            className: " w-6 h-6 p-1 rounded-full mx-auto filter grayscale hover:grayscale-0 cursor-pointer bg-[#F7AB0A]/50",
+                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
+                                strokeLinecap: "round",
+                                strokeLinejoin: "round",
+                                d: "M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75"
+                            })
                         })
                     })
                 })
