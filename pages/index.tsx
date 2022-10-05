@@ -63,7 +63,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials } : Props) => {
         <ContactMe />
       </section>
 
-      <Link href="#top">
+      <Link href="#hero">
       <footer className="sticky bottom-5 w-full cursor-pointer">
         <div className="flex items-center justify-center ">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" w-6 h-6 p-1 rounded-full mx-auto filter grayscale hover:grayscale-0 cursor-pointer  bg-[#F7AB0A]/50">
@@ -94,5 +94,6 @@ export const getStaticProps:GetStaticProps<Props> = async () => {
       projects,
       socials
     },
+    revalidate: 10,
   }
 }

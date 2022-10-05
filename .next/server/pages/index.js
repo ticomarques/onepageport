@@ -212,7 +212,7 @@ function ContactMe({}) {
                                     }),
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
                                         className: "text-2xl",
-                                        children: "+11234566778"
+                                        children: "415 844-0443"
                                     })
                                 ]
                             }),
@@ -224,7 +224,7 @@ function ContactMe({}) {
                                     }),
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
                                         className: "text-2xl",
-                                        children: "tetx@text.com"
+                                        children: "thymarques - gmail"
                                     })
                                 ]
                             }),
@@ -236,7 +236,7 @@ function ContactMe({}) {
                                     }),
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
                                         className: "text-2xl",
-                                        children: "123 developer lane"
+                                        children: "Hawaii, HI"
                                     })
                                 ]
                             })
@@ -974,7 +974,7 @@ const Home = ({ pageInfo , experiences , projects , skills , socials  })=>{
                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_ContactMe__WEBPACK_IMPORTED_MODULE_8__/* ["default"] */ .Z, {})
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_9___default()), {
-                href: "#top",
+                href: "#hero",
                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("footer", {
                     className: "sticky bottom-5 w-full cursor-pointer",
                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
@@ -1012,7 +1012,8 @@ const getStaticProps = async ()=>{
             skills,
             projects,
             socials
-        }
+        },
+        revalidate: 10
     };
 };
 

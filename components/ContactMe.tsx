@@ -34,17 +34,17 @@ function ContactMe({}: Props) {
             <div className="space-y-10">
                 <div className="flex items-center space-x-5 justify-center">
                     <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-                    <p className="text-2xl">+11234566778</p>
+                    <p className="text-2xl">415 844-0443</p>
                 </div>
 
                 <div className="flex items-center space-x-5 justify-center">
                     <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-                    <p className="text-2xl">tetx@text.com</p>
+                    <p className="text-2xl">thymarques - gmail</p>
                 </div>
 
                 <div className="flex items-center space-x-5 justify-center">
                     <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-                    <p className="text-2xl">123 developer lane</p>
+                    <p className="text-2xl">Hawaii, HI</p>
                 </div>
             </div>
 
