@@ -3,6 +3,7 @@ import React from 'react'
 import { motion } from 'framer-motion';
 import { Project } from '../typings';
 import { urlFor } from '../sanity';
+import Link from 'next/link';
 type Props = {
     projects: Project[];
 }
@@ -31,7 +32,7 @@ function Projects({projects}: Props) {
 
                     <div className="space-y-10 px-0 md:px-10 max-w-6xl">
                         <h4 className="text-4xl font-semibold text-center">
-                            <span className="underline decoration-[#F7AB0A]/50"></span> Case of study {i+1} of {projects.length}: {project.title}
+                            <span className="underline decoration-[#F7AB0A]/50"></span> {i+1}/{projects.length}: {project.title}
                         </h4>
 
                         <div className="flex items-center space-x-2 justify-center">
@@ -40,12 +41,13 @@ function Projects({projects}: Props) {
                                     key={technology._id}
                                     src={urlFor(technology.image).url()}
                                     alt={technology.title}
-                                    className="w-6 h-6"
+                                    className="w-6 h-6 md:w-12 md:h-12 rounded-full"
                                 />
                             ))}
                         </div>
 
                         <p className="text-base text-center md:text-lg md:text-left">{project.summary}</p>
+                        <a href={project.linkToBuild} className="flex flex-col text-sm text-center text-[#F7AB0A]/50 hover:text-[#F7AB0A]/90">{project.title}</a>
                     </div>
                 </div>
             ))}

@@ -652,9 +652,9 @@ function Projects({ projects  }) {
                                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                 className: "underline decoration-[#F7AB0A]/50"
                                             }),
-                                            " Case of study ",
+                                            " ",
                                             i + 1,
-                                            " of ",
+                                            "/",
                                             projects.length,
                                             ": ",
                                             project.title
@@ -665,12 +665,17 @@ function Projects({ projects  }) {
                                         children: project === null || project === void 0 ? void 0 : project.technologies.map((technology)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
                                                 src: (0,_sanity__WEBPACK_IMPORTED_MODULE_3__/* .urlFor */ .uH)(technology.image).url(),
                                                 alt: technology.title,
-                                                className: "w-6 h-6"
+                                                className: "w-6 h-6 md:w-12 md:h-12 rounded-full"
                                             }, technology._id))
                                     }),
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
                                         className: "text-base text-center md:text-lg md:text-left",
                                         children: project.summary
+                                    }),
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
+                                        href: project.linkToBuild,
+                                        className: "flex flex-col text-sm text-center text-[#F7AB0A]/50 hover:text-[#F7AB0A]/90",
+                                        children: project.title
                                     })
                                 ]
                             })
