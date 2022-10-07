@@ -10,7 +10,7 @@ type Props = {
 
 function ExperienceCard({experience}: Props) {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-7 p-4 flex-shrink-0 w-[290px] md:w-[380px] xl:w-[500px] snap-center bg-[#292929] hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-500 overflow-hidden">
+    <article className="flex flex-col rounded-lg items-center space-y-3 md:space-y-7 p-4 flex-shrink-0 w-[290px] md:w-[380px] xl:w-[500px] snap-center bg-[#292929] hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-500 overflow-hidden">
         <motion.img 
         initial={{
             y: -100,
@@ -31,7 +31,7 @@ function ExperienceCard({experience}: Props) {
         className="w-28 h-28 rounded-full md:w-20 md:h-20 xl:w-[200px] xl:h-[200px] object-cover object-center"
         />
         <div className="md:px-10">
-            <h4 className="text-3xl font-light text-center">{experience.company}</h4>
+            <h4 className="text-3xl md:text-3xl font-light text-center">{experience.company}</h4>
             <p className="font-bold text-xl mt-1 text-center">{experience.jobTitle}</p>
             <div className="flex space-x-2 my-2 md:items-center md:justify-center">
                 {

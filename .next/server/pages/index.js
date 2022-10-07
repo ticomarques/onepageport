@@ -313,7 +313,7 @@ framer_motion__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.the
 
 function ExperienceCard({ experience  }) {
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("article", {
-        className: "flex flex-col rounded-lg items-center space-y-7 p-4 flex-shrink-0 w-[290px] md:w-[380px] xl:w-[500px] snap-center bg-[#292929] hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-500 overflow-hidden",
+        className: "flex flex-col rounded-lg items-center space-y-3 md:space-y-7 p-4 flex-shrink-0 w-[290px] md:w-[380px] xl:w-[500px] snap-center bg-[#292929] hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-500 overflow-hidden",
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_2__.motion.img, {
                 initial: {
@@ -338,7 +338,7 @@ function ExperienceCard({ experience  }) {
                 className: "md:px-10",
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h4", {
-                        className: "text-3xl font-light text-center",
+                        className: "text-3xl md:text-3xl font-light text-center",
                         children: experience.company
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
@@ -623,7 +623,7 @@ function Projects({ projects  }) {
                 className: "relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80",
                 children: projects === null || projects === void 0 ? void 0 : projects.map((project, i)=>{
                     /*#__PURE__*/ return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                        className: "w-screen flex-shrink-0 flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen",
+                        className: "w-screen flex-shrink-0 flex flex-col space-y-4 items-center justify-center p-20 md:p-44 h-screen",
                         children: [
                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_2__.motion.img, {
                                 initial: {
@@ -644,10 +644,10 @@ function Projects({ projects  }) {
                                 alt: `Project: ${project}`
                             }),
                             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                className: "space-y-10 px-0 md:px-10 max-w-6xl",
+                                className: "space-y-4 px-0 md:px-10 max-w-6xl",
                                 children: [
                                     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("h4", {
-                                        className: "text-4xl font-semibold text-center",
+                                        className: "text-3xl font-semibold text-center",
                                         children: [
                                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                 className: "underline decoration-[#F7AB0A]/50"
@@ -669,7 +669,7 @@ function Projects({ projects  }) {
                                             }, technology._id))
                                     }),
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                                        className: "text-base text-center md:text-lg md:text-left",
+                                        className: "text-sm text-center md:text-lg md:text-left",
                                         children: project.summary
                                     }),
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
@@ -858,7 +858,7 @@ function Experience({ experiences  }) {
                 children: "Experience"
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                className: "w-full flex space-x-5 overflow-x-scroll mt-14 pt-20 pb-6 snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80",
+                className: "w-full flex space-x-5 overflow-x-scroll mt-10 pt-16 pb-6 snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80",
                 children: experiences.sort().map((experience)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_ExperienceCard__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
                         experience: experience
                     }, experience._id))

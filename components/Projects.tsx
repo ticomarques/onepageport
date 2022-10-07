@@ -20,7 +20,7 @@ function Projects({projects}: Props) {
     
         <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
             {projects?.map((project, i)=>(
-                <div key={i} className="w-screen flex-shrink-0 flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
+                <div key={i} className="w-screen flex-shrink-0 flex flex-col space-y-4 items-center justify-center p-20 md:p-44 h-screen">
                     <motion.img
                         initial={{ y: -300, opacity:0 }}
                         transition={{ duration: 1.2 }}
@@ -30,8 +30,8 @@ function Projects({projects}: Props) {
                         alt={`Project: ${project}`}
                     />
 
-                    <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-                        <h4 className="text-4xl font-semibold text-center">
+                    <div className="space-y-4 px-0 md:px-10 max-w-6xl">
+                        <h4 className="text-3xl font-semibold text-center">
                             <span className="underline decoration-[#F7AB0A]/50"></span> {i+1}/{projects.length}: {project.title}
                         </h4>
 
@@ -46,7 +46,7 @@ function Projects({projects}: Props) {
                             ))}
                         </div>
 
-                        <p className="text-base text-center md:text-lg md:text-left">{project.summary}</p>
+                        <p className="text-sm text-center md:text-lg md:text-left">{project.summary}</p>
                         <a href={project.linkToBuild} className="flex flex-col text-sm text-center text-[#F7AB0A]/50 hover:text-[#F7AB0A]/90">{project.title}</a>
                     </div>
                 </div>
