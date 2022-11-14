@@ -56,7 +56,7 @@ const About = ({ pageInfo  })=>{
                 transition: {
                     duration: 1.2
                 },
-                src: (0,_sanity__WEBPACK_IMPORTED_MODULE_3__/* .urlFor */ .uH)(pageInfo === null || pageInfo === void 0 ? void 0 : pageInfo.profilePic).url(),
+                src: (0,_sanity__WEBPACK_IMPORTED_MODULE_3__/* .urlFor */ .uH)(pageInfo?.profilePic).url(),
                 className: "mb-5 mt-5 flex-shrink-0 w-24 h-24 rounded-full object-cover md:rounded-lg md:w-64 md:h-64 xl:w-[500px] xl:h-[600px] "
             }),
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
@@ -65,17 +65,19 @@ const About = ({ pageInfo  })=>{
                     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("h4", {
                         className: "text-4xl font-semibold",
                         children: [
-                            " Just ",
+                            " ",
+                            "<",
                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                 className: "underline decoration-[#F7AB0A]/50",
-                                children: "little"
+                                children: "TiagoDeveloper"
                             }),
-                            " of me"
+                            "  ",
+                            "/>"
                         ]
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
                         className: "text-sm mt-0",
-                        children: pageInfo === null || pageInfo === void 0 ? void 0 : pageInfo.backgroundInformation
+                        children: pageInfo?.backgroundInformation
                     })
                 ]
             })
@@ -313,7 +315,7 @@ framer_motion__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.the
 
 function ExperienceCard({ experience  }) {
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("article", {
-        className: "flex flex-col rounded-lg items-center space-y-3 md:space-y-7 p-4 flex-shrink-0 w-[290px] md:w-[380px] xl:w-[500px] snap-center bg-[#292929] hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-500 overflow-hidden",
+        className: "flex flex-col rounded-lg items-center space-y-3 md:space-y-7 p-4 flex-shrink-0 w-[290px] md:w-[380px] xl:w-[500px] snap-center bg-[#292929] hover:opacity-100 opacity-60 cursor-pointer transition-opacity duration-500 overflow-hidden",
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_2__.motion.img, {
                 initial: {
@@ -330,7 +332,7 @@ function ExperienceCard({ experience  }) {
                 viewport: {
                     once: true
                 },
-                src: (0,_sanity__WEBPACK_IMPORTED_MODULE_3__/* .urlFor */ .uH)(experience === null || experience === void 0 ? void 0 : experience.companyImage).url(),
+                src: (0,_sanity__WEBPACK_IMPORTED_MODULE_3__/* .urlFor */ .uH)(experience?.companyImage).url(),
                 alt: `Company that I have worked: ${experience.company}`,
                 className: "w-28 h-28 rounded-full md:w-20 md:h-20 xl:w-[200px] xl:h-[200px] object-cover object-center"
             }),
@@ -497,7 +499,7 @@ _BackgroundCircles__WEBPACK_IMPORTED_MODULE_5__ = (__webpack_async_dependencies_
 function Hero({ pageInfo  }) {
     const [text, count] = (0,react_simple_typewriter__WEBPACK_IMPORTED_MODULE_3__.useTypewriter)({
         words: [
-            `Hi, my name is ${pageInfo === null || pageInfo === void 0 ? void 0 : pageInfo.name}`,
+            `Hi, my name is ${pageInfo?.name}`,
             "FrontendDev.tsx",
             "<LetsCode />"
         ],
@@ -510,7 +512,7 @@ function Hero({ pageInfo  }) {
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_BackgroundCircles__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z, {}),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
                 className: "relative rounded-full h-32 w-32 mx-auto object-cover",
-                src: (0,_sanity__WEBPACK_IMPORTED_MODULE_4__/* .urlFor */ .uH)(pageInfo === null || pageInfo === void 0 ? void 0 : pageInfo.heroImage).url(),
+                src: (0,_sanity__WEBPACK_IMPORTED_MODULE_4__/* .urlFor */ .uH)(pageInfo?.heroImage).url(),
                 alt: "xxx"
             }),
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
@@ -518,7 +520,7 @@ function Hero({ pageInfo  }) {
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
                         className: "text-sm uppercase text-gray-500 pb-2 tracking-[10px]",
-                        children: pageInfo === null || pageInfo === void 0 ? void 0 : pageInfo.role
+                        children: pageInfo?.role
                     }),
                     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("h1", {
                         children: [
@@ -621,8 +623,7 @@ function Projects({ projects  }) {
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                 className: "relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80",
-                children: projects === null || projects === void 0 ? void 0 : projects.map((project, i)=>{
-                    /*#__PURE__*/ return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                children: projects?.map((project, i)=>/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                         className: "w-screen flex-shrink-0 flex flex-col space-y-4 items-center justify-center p-20 md:p-44 h-screen",
                         children: [
                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_2__.motion.img, {
@@ -640,7 +641,7 @@ function Projects({ projects  }) {
                                 viewport: {
                                     once: true
                                 },
-                                src: (0,_sanity__WEBPACK_IMPORTED_MODULE_3__/* .urlFor */ .uH)(project === null || project === void 0 ? void 0 : project.image).url(),
+                                src: (0,_sanity__WEBPACK_IMPORTED_MODULE_3__/* .urlFor */ .uH)(project?.image).url(),
                                 alt: `Project: ${project}`
                             }),
                             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
@@ -662,7 +663,7 @@ function Projects({ projects  }) {
                                     }),
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                                         className: "flex items-center space-x-2 justify-center",
-                                        children: project === null || project === void 0 ? void 0 : project.technologies.map((technology)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
+                                        children: project?.technologies.map((technology)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
                                                 src: (0,_sanity__WEBPACK_IMPORTED_MODULE_3__/* .urlFor */ .uH)(technology.image).url(),
                                                 alt: technology.title,
                                                 className: "w-6 h-6 md:w-12 md:h-12 rounded-full"
@@ -680,8 +681,7 @@ function Projects({ projects  }) {
                                 ]
                             })
                         ]
-                    }, i);
-                })
+                    }, i))
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                 className: "w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12"
@@ -731,8 +731,8 @@ function Skill({ skill , directionLeft  }) {
                     opacity: 1,
                     x: 0
                 },
-                src: (0,_sanity__WEBPACK_IMPORTED_MODULE_3__/* .urlFor */ .uH)(skill === null || skill === void 0 ? void 0 : skill.image).url(),
-                alt: skill === null || skill === void 0 ? void 0 : skill.title,
+                src: (0,_sanity__WEBPACK_IMPORTED_MODULE_3__/* .urlFor */ .uH)(skill?.image).url(),
+                alt: skill?.title,
                 className: "rounded-full border border-gray-500 object-cover w-16 h-16 md:w-24 md:h-24 xl:w-28 xl:h-28 filter group-hover:grayscale transition duration-500 ease-in-out"
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
@@ -742,7 +742,7 @@ function Skill({ skill , directionLeft  }) {
                     children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
                         className: "text-xl md:text-2xl font-bold text-black opacity-100",
                         children: [
-                            skill === null || skill === void 0 ? void 0 : skill.progress,
+                            skill?.progress,
                             " %"
                         ]
                     })
@@ -840,7 +840,6 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([fram
 
 
 function Experience({ experiences  }) {
-    experiences.sort((a, b)=>b.dateStarted.slice(0, 3) - a.dateStarted.slice(0, 3));
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(framer_motion__WEBPACK_IMPORTED_MODULE_2__.motion.div, {
         initial: {
             opacity: 0
@@ -859,7 +858,9 @@ function Experience({ experiences  }) {
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                 className: "w-full flex space-x-5 overflow-x-scroll mt-10 pt-16 pb-6 snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80",
-                children: experiences.sort().map((experience)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_ExperienceCard__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
+                children: experiences.sort((a, b)=>{
+                    return b.order - a.order;
+                }).map((experience)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_ExperienceCard__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
                         experience: experience
                     }, experience._id))
             })

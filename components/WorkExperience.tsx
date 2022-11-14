@@ -8,10 +8,6 @@ type Props = {
 }
 
 function Experience({experiences}: Props) {
-
-experiences.sort((a,b)=> b.dateStarted.slice(0,3) - a.dateStarted.slice(0,3));
-
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -21,10 +17,9 @@ experiences.sort((a,b)=> b.dateStarted.slice(0,3) - a.dateStarted.slice(0,3));
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">Experience</h3>
 
       <div className="w-full flex space-x-5 overflow-x-scroll mt-10 pt-16 pb-6 snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
-        {experiences.sort().map(experience => (
+        {experiences.sort((a,b)=>{ return b.order - a.order}).map(experience => (
           <ExperienceCard experience={experience} key={experience._id}/>
         ))}
-        
       </div>
     </motion.div>
     
