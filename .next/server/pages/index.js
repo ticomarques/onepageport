@@ -69,7 +69,7 @@ const About = ({ pageInfo  })=>{
                             "<",
                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                 className: "underline decoration-[#F7AB0A]/50",
-                                children: "TiagoDeveloper"
+                                children: "TiagoDev"
                             }),
                             "  ",
                             "/>"

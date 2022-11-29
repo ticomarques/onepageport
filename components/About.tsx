@@ -51,7 +51,7 @@ const About = ({pageInfo}:Props) => {
         />
 
         <div className="space-y-5 px-0 md:px-10">
-            <h4 className="text-4xl font-semibold"> {"<"}<span className="underline decoration-[#F7AB0A]/50">TiagoDeveloper</span>  {"/>"}</h4>
+            <h4 className="text-4xl font-semibold"> {"<"}<span className="underline decoration-[#F7AB0A]/50">TiagoDev</span>  {"/>"}</h4>
             <p className="text-sm mt-0">{pageInfo?.backgroundInformation}</p>
         </div>
 
