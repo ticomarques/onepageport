@@ -28,7 +28,7 @@ function ExperienceCard({experience}: Props) {
         }}
         src={urlFor(experience?.companyImage).url()} 
         alt={`Company that I have worked: ${experience.company}`} 
-        className="w-28 h-28 rounded-full md:w-20 md:h-20 xl:w-[200px] xl:h-[200px] object-cover object-center"
+        className="w-24 h-24 rounded-full md:w-20 md:h-20 xl:w-[160px] xl:h-[160px] object-cover object-center"
         />
         <div className="md:px-10">
             <h4 className="text-3xl md:text-3xl font-light text-center">{experience.company}</h4>
