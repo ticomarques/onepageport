@@ -15,8 +15,8 @@
 /sanity/node_modules
 
 # production
-/build
-.next
+#/build
+#.next
 
 # misc
 .DS_Store
